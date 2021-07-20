@@ -180,7 +180,60 @@ the_longest_word(['hikkkkjuj', 'bey', 'hello', 'morning'])"""
         numbers.append(i*i)
         i = i + 1
     return numbers
-print(squared_numbers(5, 8))"""
+print(squared_numbers(10, 20))"""
+
+
+"""def is_greater(my_list, n):
+    new_list = []
+    for num in my_list:
+        if num > n:
+            new_list.append(num)
+    return new_list
+
+print(is_greater([1, 2, 3, 4 ,5, 6], 4))"""
+
+"""def numbers_letters_count(my_str):
+    x = 0
+    y = 0
+    # new_list = []
+    for i in my_str:
+        if i.isdigit():
+            x += 1
+        else:
+            y += 1
+    # new_list.append(x)
+    # new_list.append(y)
+    return [x, y]
+print(numbers_letters_count("hello 15")) """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
