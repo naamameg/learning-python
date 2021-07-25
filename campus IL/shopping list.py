@@ -25,7 +25,6 @@ def menu():
     print('Goodbye!')
 
 
-
 #1
 def menu_option_1(grocery_list):
     print(grocery_list)
