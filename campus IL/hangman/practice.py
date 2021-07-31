@@ -230,7 +230,7 @@ print(sequence_del('hhhheeeeyyyyy'))"""
 
 
 
-def menu():
+"""def menu():
     grocery_list = []
     list_1 = input('enter your list here\n').split(',')
     for word in list_1:
@@ -319,56 +319,136 @@ def menu_option_8(grocery_list):
     for i in range(len(indexes_to_remove)-1,-1,-1):
         del grocery_list[indexes_to_remove[i]]
 
-menu()
+menu()"""
 
 
 
 
+"""def arrow(my_char, max_length):
+    for i in range(1, max_length):
+        new_char = my_char * i
+        print(new_char)
+    x = max_length
+    for i in range(max_length, 0, -1):
+        new_char = my_char * i
+        print(new_char)
+arrow('h', 3)"""
+
+"""#ask etay
+data = ("self", "py", 1.543)
+format_string = "Hello", "learner, you have only", "units before you master the course!"
+print(format_string[0] + ' ' + data[0] + ' ' + data[1] + ' ' + format_string[1] + ' ' + str(data[2])[:3] + ' '+ format_string[2])"""
+
+
+"""def mult_tuple(tuple1, tuple2):
+    empty_list = []
+    for item in tuple1:
+        for i in range(len(tuple2)):
+            empty_list.append((item, tuple2[i]))
+            empty_list.append((tuple2[1], item))
+    empty_list = tuple(empty_list)
+    return empty_list
+print(mult_tuple((1,2,3),(4,5,6)))"""
+
+
+"""def sort_anagrams(list_of_strings):
+    used_words = []
+    yet_another_empty_list = []
+    empty_list= []
+    for word in list_of_strings:
+        word = list(word)
+        word.sort()
+        empty_list.append(word)
+    for i in range(len(empty_list)):
+        another_empty_list = []
+        for j in range(len(empty_list)):
+            if empty_list[i] == empty_list[j]:
+                if not empty_list[j] in used_words:
+                    another_empty_list.append(list_of_strings[j])
+                    used_words.append(list_of_strings[j])
+        yet_another_empty_list.append(another_empty_list)
+    return yet_another_empty_list
+print(sort_anagrams(['abc', 'cba']))"""
 
 
 
+"""id_dict = {'firstname': 'Mariah', 'last name': 'Carey', 'birth date': '27.03.1970', 'hobbies': ['Sing', 'Compose', 'Act']}
+def mariah_carey(my_dict):
+    choose_number = int(input('enter a number between 1 and 7\n'))
+    if choose_number == 1:
+        print(my_dict['last name'])
+    elif choose_number == 2:
+        print(my_dict['birth date'])
+    elif choose_number == 3:
+        print(len(my_dict['hobbies']))
+    elif choose_number == 4:
+        print(my_dict['hobbies'][-1])
+    elif choose_number == 5:
+        my_dict['hobbies'].append('Cooking')
+        print(my_dict)
+    elif choose_number == 6:
+        my_dict['birth date'] = my_dict['birth date'].split('.')
+        my_dict['birth date'] = tuple(my_dict['birth date'])
+        print(my_dict['birth date'])
+    elif choose_number == 7:
+        my_dict['age'] = '51'
+        print(my_dict)
+    return my_dict
+mariah_carey(id_dict)"""
+
+
+"""def count_chars(my_str):
+    used_letters = []
+    count_chars_dict = {}
+    for letter in my_str:
+        letters = 0
+        if letter not in used_letters:
+            for another_letter in my_str:
+                if another_letter == letter:
+                    letters = letters + 1
+                count_chars_dict[letter] = letters
+                used_letters.append(letter)
+    return count_chars_dict
+print(count_chars('I DID IT!!!!'))"""
+
+
+"""def inverse_dict(my_dict):
+    reverse_dict = {}
+    for key, value in my_dict.items():
+        value_list = [key]
+        if value in reverse_dict:
+            reverse_dict[value].append(key)
+        else:
+            reverse_dict[value] = value_list
+    return reverse_dict
+
+def not_even(a_dict):
+    for key, value in a_dict.items():
+        if value %2 != 0:
+            print(key)
+
+not_even({'a': 3, 'b': 2, 'c': 3})
+# print(inverse_dict({'a': 3, 'b': 2, 'c': 3}))"""
+
+
+"""def are_files_equal(file1, file2):
+    file1 = open(file1)
+    file2 = open(file2)
+    content1 = file1.read()
+    file1.close()
+    content2 = file2.read()
+    file2.close()
+    if content1 == content2:
+        return True
+    else:
+        return False
+print(are_files_equal(r"C:\naama\files\a.txt", r"C:\naama\files\c.txt"))"""
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def print_song(file_path):
+    file = input('enter a file\n)
+                 print("happy birthfay my lovely girlfriend <3")
 
 
 

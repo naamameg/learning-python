@@ -11,9 +11,6 @@ def check_valid_input(letter_guessed, old_letters_guessed):
     else:
         return True
 
-
-
-
 def try_update_letter_guessed(letter_guessed, old_letters_guessed):
     if check_valid_input(letter_guessed, old_letters_guessed):
         old_letters_guessed.append(letter_guessed)
@@ -25,7 +22,36 @@ def try_update_letter_guessed(letter_guessed, old_letters_guessed):
             new_old_letters_guessed = new_old_letters_guessed + i + ' -> '
         print(new_old_letters_guessed + old_letters_guessed[-1])
         return False
-print(try_update_letter_guessed('a', ['t', 'r', 'o']))
+
+def show_hidden_word(secret_word, old_letters_guessed):
+    word_to_print = str()
+    for letter in secret_word:
+        if letter in old_letters_guessed:
+            word_to_print = word_to_print + (letter + ' ')
+        else:
+            word_to_print = word_to_print + ('_ ')
+    print(word_to_print)
+
+show_hidden_word('helli', ['l', 'r', 'q', 'x'])
+
+def check_win(secret_word, old_letters_guessed):
+    for letter in secret_word:
+        if not letter in old_letters_guessed:
+            return False
+    return True
+print(check_win('hello', ['l', 'e', 'h', 'o', 'r']))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -95,7 +95,7 @@ def list_in_dict(my_list):
             if i % 2 == 0:
                 my_dict[my_list[i]] = my_list[i+1]
         return my_dict
-print(list_in_dict('jk5k8i52n6635'))
+
 
 
 #1 extra
@@ -113,10 +113,39 @@ d = {1: 5, 2: 'two', 3: {'naama': 'the queen'}}"""
 
 #8
 
-def dict_from_list(my_string):
-    for i in my_string[::2]:
-        list_in_dict(i)
-dict_from_list('a b c d')
+"""def in_dict(my_list):
+
+    if len(my_list) % 2 > 0:
+        print('ERROR!!!!!!!!')
+        return False
+    else:
+        my_list = my_list[:-1].split(" ")
+        return list_in_dict(my_list)
+print(in_dict('a b c d '))"""
+
+
+def get_a_dict(number):
+    my_fucking_dick = {}
+    for i in range(number):
+        key = input('enter a key\n')
+        value = [input('enter a value\n')]
+        if key in my_fucking_dick:
+            my_fucking_dick[key].extend(value)
+        else:
+            my_fucking_dick[key] = value
+    return  my_fucking_dick
+print(get_a_dict(2))
+
+
+def check_win(secret_word, old_letters_guessed):
+
+
+
+
+
+
+
+
 
 
 

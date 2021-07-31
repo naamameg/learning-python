@@ -4,7 +4,7 @@ list1 = [1, 2, 3, 4, 5, 6]
 print(random.choice(list1))
 
 
-print("Wellcome to the game Hangman")
+print("Welcome to the game Hangman")
 print(""" _    _
 | |  | |
 | |  | |
