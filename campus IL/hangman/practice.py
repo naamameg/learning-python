@@ -446,9 +446,35 @@ print(are_files_equal(r"C:\naama\files\a.txt", r"C:\naama\files\c.txt"))"""
 
 
 
-def print_song(file_path):
-    file = input('enter a file\n)
-                 print("happy birthfay my lovely girlfriend <3")
+"""def print_song():
+    file = open(input('enter a file path\n'))
+    task = input('enter a task: sort, rev or last\n')
+    if task == 'sort':
+        content = file.read()
+        content = content.split(" ")
+        content = sorted(content)
+        print(content)
+    elif task == 'rev':
+        for line in file:
+            print(line[-1::-1])
+    elif task == 'last':
+        number = int(input('enter a number\n'))
+        count = file.readlines()
+        print(count[number:])
+    file.close()
+print_song()"""
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
