@@ -39,7 +39,7 @@ def check_win(secret_word, old_letters_guessed):
         if not letter in old_letters_guessed:
             return False
     return True
-print(check_win('hello', ['l', 'e', 'h', 'o', 'r']))
+print(check_win('hello', ['p', 'e', 'h', 'o', 'r']))
 
 
 

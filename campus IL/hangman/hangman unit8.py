@@ -35,4 +35,3 @@ def print_hangman(num_of_tries):
 print_hangman(4)
 
 
-x = ""

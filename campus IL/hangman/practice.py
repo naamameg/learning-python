@@ -465,6 +465,95 @@ print(are_files_equal(r"C:\naama\files\a.txt", r"C:\naama\files\c.txt"))"""
 print_song()"""
 
 
+# def copy_file_content(source, destination):
+#     with open(source, 'r') as source_file:
+#         x = source_file.read()
+#     with open(destination, 'w') as destination_file:
+#         destination_file.write(x)
+# copy_file_content(r"C:\Users\yuval\PycharmProjects\source.txt", r"C:\Users\yuval\PycharmProjects\destination.txt")
+
+
+
+"""def list_from_file(file_path):
+    with open(file_path, 'r') as handler:
+        numbers_line = handler.read().split(',')
+        for i in range(len(numbers_line)):
+            numbers_line[i] = int(numbers_line[i])
+    return numbers_line
+
+def who_is_missing(file_name):
+    numbers = list_from_file(file_name)
+    numbers.sort()
+    for i in range(len(numbers)):
+        if numbers[i+1] - numbers[i] == 1:
+            continue
+        else:
+            the_number = numbers[i + 1] - 1
+            the_number = str(the_number)
+            with open(r'found_number.txt', 'w') as new_file:
+                new_file.write(the_number)
+            break"""
+
+"""def convert_to_seconds(time):
+    time = time.split(":")
+    minutes = int(time[0])
+    seconds = int(time[1])
+    total_time = minutes * 60 + seconds
+    return total_time
+
+def play_list(file_songs):
+    song_dict = {}
+    with open(file_songs, 'r') as handler:
+        my_song_list = handler.read().split(";")
+        my_song_list.remove(my_song_list[-1])
+        for i in range(0, len(my_song_list), 3):
+            if my_song_list[i][0] == "\n":
+                my_song_list[i] = my_song_list[i][2:]
+            song_dict[my_song_list[i]] = [my_song_list[i+1], convert_to_seconds(my_song_list[i+2])]
+    return song_dict
+
+
+def my_mp3_playlist(file_path):
+    songs = play_list(file_path)
+    longest_song_time = 0
+    longest_song_name = ''
+    number_of_songs = 0
+    singer_names = {}
+    most_song = ''
+    number_of_singers = 0
+    for song_name, song_details in songs.items():
+        if song_details[0] in singer_names:
+            singer_names[song_details[0]] = singer_names[song_details[0]] +1
+        else:
+            singer_names[song_details[0]] = 1
+        number_of_songs = number_of_songs + 1
+        if song_details[1] > longest_song_time:
+            longest_song_time = song_details[1]
+            longest_song_name = song_name
+    for name, song in singer_names.items():
+        if singer_names[name] > number_of_singers:
+            number_of_singers = singer_names[name]
+            most_song = name
+    return (longest_song_name, number_of_songs, most_song)
+
+print(my_mp3_playlist())"""
+
+
+"""def my_mp4_playlist(file_path, new_song):
+    with open(file_path, 'r') as songs:
+        song_lines = songs.readlines()
+        song_string = ''
+        for i in range(len(song_lines)):
+            if i == 2:
+                song_lines[i] = new_song
+            song_string = song_string + song_lines[i]
+
+    with open(file_path, 'w') as destination_file:
+        new_songs_list = destination_file.write(song_string)
+my_mp4_playlist()"""
+
+
+
 
 
 
