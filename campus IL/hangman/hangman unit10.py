@@ -100,31 +100,39 @@ def try_update_letter_guessed(letter_guessed, old_letters_guessed):
             print(new_old_letters_guessed + old_letters_guessed[-1])
         return False
 
+
+
 #6
-def show_hidden_word(secret_word, old_letters_guessed):
-    word_to_print = str()
+
+def check_win(secret_word, old_letters_guessed):
     for letter in secret_word:
-        if letter in old_letters_guessed:
-            word_to_print = word_to_print + (letter + ' ')
-        else:
-            word_to_print = word_to_print + ('_ ')
-    print(word_to_print)
+        if not letter in old_letters_guessed:
+            return False
+    return True
+
 
 print_title()
-
+number_of_tries = 0
+print_hangman(number_of_tries)
 file_path = input("enter a file path\n")
 index = int(input('enter a number\n'))
 
 secret_word = choose_word(file_path, index)
-
-(print_hangman(0))
-
-show_hidden_word(secret_word, [])
+secret_word = secret_word[1]
+old_letters_guessed = []
 
 
-letter_to_choose = input('enter a letter\n')
-while not try_update_letter_guessed(letter_to_choose, []):
-    print("try again")
+while not check_win(secret_word, old_letters_guessed):
+
+    show_hidden_word(secret_word, old_letters_guessed)
     letter_to_choose = input('enter a letter\n')
+    show_hidden_word(secret_word, old_letters_guessed)
+    if letter_to_choose not in secret_word:
+        print("):")
+        print_hangman(number_of_tries + 1)
+        number_of_tries +=1
+    while not try_update_letter_guessed(letter_to_choose, old_letters_guessed):
+        print("try again")
+        letter_to_choose = input('enter a letter\n')
 
 

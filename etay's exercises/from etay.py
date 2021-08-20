@@ -124,7 +124,7 @@ d = {1: 5, 2: 'two', 3: {'naama': 'the queen'}}"""
 print(in_dict('a b c d '))"""
 
 
-def get_a_dict(number):
+"""def get_a_dict(number):
     my_fucking_dick = {}
     for i in range(number):
         key = input('enter a key\n')
@@ -137,7 +137,24 @@ def get_a_dict(number):
 print(get_a_dict(2))
 
 
-def check_win(secret_word, old_letters_guessed):
+def check_win(secret_word, old_letters_guessed):"""
+
+people_dict = {'204323877': {'name': 'naama', 'quest': 'learning python', 'favorite color': 'blue'},
+               '314010521':{'name': 'etay', 'quest': 'teaching python', 'favorite color': 'black'}}
+people_dict['204323877']['last name'] = 'megidish'
+
+
+dict_of_nums = {1: 'hello', 2: 'bye', 3 : 'what why'}
+
+for key, value in dict_of_nums.items():
+    print(f"the value of key {key} is {value}")
+
+
+
+
+
+
+
 
 
 
