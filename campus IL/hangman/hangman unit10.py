@@ -123,16 +123,21 @@ old_letters_guessed = []
 
 
 while not check_win(secret_word, old_letters_guessed):
-
     show_hidden_word(secret_word, old_letters_guessed)
     letter_to_choose = input('enter a letter\n')
-    show_hidden_word(secret_word, old_letters_guessed)
-    if letter_to_choose not in secret_word:
-        print("):")
-        print_hangman(number_of_tries + 1)
-        number_of_tries +=1
     while not try_update_letter_guessed(letter_to_choose, old_letters_guessed):
         print("try again")
         letter_to_choose = input('enter a letter\n')
+    if number_of_tries == 6:
+        print("You'reeeee A Loser!")
+        break
+    elif letter_to_choose not in secret_word:
+        print("):")
+        print_hangman(number_of_tries + 1)
+        number_of_tries +=1
+if check_win(secret_word, old_letters_guessed):
+    print(secret_word)
+    print("You Win")
+
 
 
