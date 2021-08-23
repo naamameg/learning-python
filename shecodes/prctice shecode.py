@@ -18,7 +18,7 @@ x = car.get("model")
 
 print(x)"""
 
-"""student = {'name': 'John', 'age': 25, 'courses': ['Math', 'CompuSci']}
+"""student = {'names': 'John', 'age': 25, 'courses': ['Math', 'CompuSci']}
 student.pop('age')
 print(student)"""
 
@@ -161,10 +161,90 @@ def diamond_from_stars(number):
 diamond_from_stars(6)"""
 
 
+"""import random
+def guess_a_number():
+    numbers_list = list(range(1, 11))
+    number = int(input("enter a number between 1 and 10\n"))
+    random_number = random.choice(numbers_list)
+    while number != random_number:
+        if number > random_number:
+            print("big")
+            number = int(input("enter a number between 1 and 10\n"))
+        elif number < random_number:
+            print("small")
+            number = int(input("enter a number between 1 and 10\n"))
+    print("WIN")
+
+guess_a_number()"""
+
+
+"""for i in range(1, 51):
+    if i % 7 == 0:
+        print("BOOM")
+    else:
+        print(i)"""
 
 
 
+"""def seven():
+    for i in range(1, 21):
+        number = input("enter a number\n")
+        if i % 7 == 0:
+            if number != "boom":
+                print("LOSE")
+                return False
+            else:
+                continue
+        elif i % 7 != 0:
+            if int(number) != i:
+                print("LOSE")
+                return False
 
+    print("WIN")
+    return True
+
+
+
+def seven_boom():
+    divided_by_7 = False
+    divided_by_14 = False
+    computer_turn = False
+    for i in range(1, 51):
+        computer_turn = i % 2 == 0
+        divided_by_7 = i % 7 == 0
+        divided_by_14 = i % 14 == 0
+        if computer_turn:
+            if not divided_by_7:
+                print(i)
+            elif divided_by_14:
+                print(" boom trach")
+            elif divided_by_7:
+                print("boom")
+        else:
+            number = input("enter a number\n")
+            if not divided_by_7:
+                if int(number) != i:
+                    print("LOSE")
+                    return False
+            elif divided_by_14:
+                if number != " boom trach":
+                    print("LOSE")
+                    return False
+            else:
+                if number != "boom":
+                    print("LOSE")
+                    return False
+seven_boom()"""
+
+
+def name_movie(names, movies):
+    name_and_movie = {}
+    for i in range(len(names)):
+        name_and_movie[names[i]] = movies[i]
+    for name, movie in name_and_movie:
+        x = f"{name}{movie}"
+
+print(name_movie([1, 2, 3], ['a', 'b', 'c']))
 
 
 
