@@ -139,7 +139,7 @@ print(get_a_dict(2))
 
 def check_win(secret_word, old_letters_guessed):"""
 
-people_dict = {'204323877': {'name': 'naama', 'quest': 'learning python', 'favorite color': 'blue'},
+"""people_dict = {'204323877': {'name': 'naama', 'quest': 'learning python', 'favorite color': 'blue'},
                '314010521':{'name': 'etay', 'quest': 'teaching python', 'favorite color': 'black'}}
 people_dict['204323877']['last name'] = 'megidish'
 
@@ -147,43 +147,106 @@ people_dict['204323877']['last name'] = 'megidish'
 dict_of_nums = {1: 'hello', 2: 'bye', 3 : 'what why'}
 
 for key, value in dict_of_nums.items():
-    print(f"the value of key {key} is {value}")
+    print(f"the value of key {key} is {value}")"""
 
 
 
 
+#1
+#קבלי רשימה של מספרים, והדפיסי רשימה שכל איבר בה הוא פי 2 מהאיבר המתאים ברשימה שקיבלת
+
+"""def double_number(num):
+    return num * 2
+list1 = [1,2,3,4,5]
+result = list(map(double_number, list1))
+print(result)"""
+
+"""def double_number(a_list):
+    return [x*2 for x in a_list]
+print(double_number([1,2,3,4,5]))"""
 
 
+#2
+#קבל רשימה של מספרים והדפיסי רשימה שיש בה רק את הזוגיים מביניהם
+
+"""def even_number(num_list):
+    return [x for x in num_list if x % 2 ==0]
+print(even_number([1,2,3,4,5,6,7,8,9]))"""
 
 
+#3
+#קבלי רשימה של מספרים והדפיסי רשימה שכל איבר בה הוא פי 2 מאיבר אי זוגי ברשימה שקיבלת
+
+"""def double_odd_nuber(num_list):
+    return [x * 2 for x in num_list if x % 2 != 0]
+print(double_odd_nuber([1,2,3,4,5,6,7,8,9]))"""
 
 
+"""#4
+#קבלי רשימה של מחרוזות. הדפיסי רשימה שכל איבר בה הוא האיבר המתאים ברשימה שקיבלת, רק שאחריו כתוב גם "please"
+
+def please(words_list):
+    return [word + " please" for word in words_list]
+print(please(['what?', 'why?']))
+"""
+
+"""#1
+#לקבל רשימה של מחרוזות ולהדפיס את האות הראשונה של כל איבר ברשימה שמורכב מ 10 תווים או פחות
+def ten_letters(string_list):
+    return [word[0] for word in string_list if len(word) < 10]
+print(ten_letters(['hello', 'asdfghjkzx', 'name', 'rjhutkgivun']))
+"""
+"""#2
+#לקבל רשימה ולהדפיס רשימה שיש בה רק את האיברים במקומות הזוגיים ברשימה שקיבלת (כלומר את המקום ה 0, המקום ה 2 וכו')
+
+def even_word(words):
+    return [words[i] for i in range(len(words)) if i %2 ==0]
+print(even_word(['hello', 'asdfghjkzx', 'name', 'rjhutkgivun']))"""
+
+#3
+#לקבל שתי רשימות של מספרים ולהדפיס רשימה שיש בה רק את האיברים ברשימת קלט א שגדולים יותר מכלל האיברים ברשימה השניה (נניח אם האיבר המקסימלי ברשימה השניה הוא 7, אז להדפיס רק איברים שגדולים מ 7 מהרשימה הראשונה)
+
+"""def bigger_number_list(num_list_1, num_list_2):
+    return [num for num in num_list_1 if num > max(num_list_2)]
+print(bigger_number_list([1,2,3,4,5,6],[1,2,3]))"""
+
+"""#4
+#לקבל רשימה של מספרים ולהדפיס רשימה של המספרים ההופכיים (כלומר אם המספר הוא 3 אז ברשימת הפלט יהיה מינוס 3, ואם המספר הוא מינוס 3 אז יהיה ברשימת הפלט 3)
+
+def opposite_number(num_list):
+    return [-num for num in num_list]
+print(opposite_number([1,2,3,4,-5]))"""
+
+"""#5
+#לקבל מחרוזת של ספרות ולהדפיס רשימה שכל איבר בה הוא מספר ששווה לספרה שיש למחרוזת במקום המתאים
+
+def positinn_number(number_string):
+    return [int(digit) for digit in number_string]
+print(positinn_number("123"))"""
 
 
+class Clock:
 
+    def __init__(self, corrent_time):
+        self._corrent_time = corrent_time
+        self.TIMEZONES = {
+            "jerusalem": 3,
+            "New Yort": -2,
+            "Milano": 0
+        }
+    def time_passes(self, houres):
+        self._corrent_time = (self._corrent_time + houres) % 24
+    def print_time(self, TIMEZONE="Milano"):
+        new_time = (self._corrent_time + self.TIMEZONES[TIMEZONE])
+        print(new_time)
+        if new_time >= 20:
+            print("good night")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+time = Clock(7)
+time_shtaim = Clock(7)
+time.time_passes(8)
+time.print_time(TIMEZONE="jerusalem")
+time_shtaim.print_time()
 
 
 

@@ -201,11 +201,11 @@ guess_a_number()"""
                 return False
 
     print("WIN")
-    return True
+    return True"""
 
 
 
-def seven_boom():
+"""def seven_boom():
     divided_by_7 = False
     divided_by_14 = False
     computer_turn = False
@@ -227,7 +227,7 @@ def seven_boom():
                     print("LOSE")
                     return False
             elif divided_by_14:
-                if number != " boom trach":
+                if number != "boom trach":
                     print("LOSE")
                     return False
             else:
@@ -237,19 +237,25 @@ def seven_boom():
 seven_boom()"""
 
 
-def name_movie(names, movies):
-    name_and_movie = {}
-    for i in range(len(names)):
-        name_and_movie[names[i]] = movies[i]
-    for name, movie in name_and_movie:
-        x = f"{name}{movie}"
-
-print(name_movie([1, 2, 3], ['a', 'b', 'c']))
+"""def name_movie(movies, names):
+    name_and_movie = dict(zip(movies, names))
+    return [f"{movie} is played by {name}" for movie,name in name_and_movie.items()]
 
 
+print(name_movie(['A', 'B', 'C'], ['a', 'b', 'c']))
+"""
 
 
+"""def name_movie(movies, names):
+    return dict(zip(movies, names))
 
 
+print(name_movie(['A', 'B', 'C'], ['a', 'b', 'c']))"""
 
+"""numbers = [i*100 for i in range(1,10) if i%2 == 0]
+print(numbers)
+"""
 
+"""print([i*100 if i%2 == 0 else i for i in range(1,10)])"""
+
+"""print(["boom" if i % 7 == 0 else i for i in range(1,51)])"""
