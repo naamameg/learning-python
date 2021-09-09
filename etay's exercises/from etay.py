@@ -225,7 +225,7 @@ def positinn_number(number_string):
 print(positinn_number("123"))"""
 
 
-class Clock:
+"""class Clock:
 
     def __init__(self, corrent_time):
         self._corrent_time = corrent_time
@@ -246,13 +246,78 @@ time = Clock(7)
 time_shtaim = Clock(7)
 time.time_passes(8)
 time.print_time(TIMEZONE="jerusalem")
-time_shtaim.print_time()
+time_shtaim.print_time()"""
+
+
+"""class Bottle:
+    def __init__(self, water_amount, capacity):
+        self._water_amount = water_amount
+        self._capacity = capacity
+        if self._water_amount > self._capacity:
+            print("error! Not enough capacity".upper())
+    def fill(self, amount):
+        if self._water_amount + amount > self._capacity:
+            print("error! Not enough capacity".upper())
+        else:
+            self._water_amount = self._water_amount + amount
+    def empty(self, amount):
+        if self._water_amount < amount:
+            print("error! Not enough water in bottle!".upper())
+        else:
+            self._water_amount = self._water_amount - amount
+    def pour(self, amount, other_bottle):
+        self.empty(amount)
+        other_bottle.fill(amount)
+    def print_details(self):
+        print(f"amount of liquid is {self._water_amount}. capacity is {self._capacity}")
 
 
 
+bottle = Bottle(3, 9)
+other_bottle = Bottle(1,10)
+bottle.fill(6)
+
+bottle.pour(6, other_bottle)
+print(bottle._water_amount)
+print(other_bottle._water_amount)
 
 
+def main():
+    bottles = [Bottle(0,10) for i in range(10)]
+    bottles[0].fill(10)
+    for i in range(len(bottles)-1):
+        bottles[i].pour(9-i, bottles[i+1])
+        bottles[i].print_details()
 
 
+        
+     # bottles[i].print_details()
+     #    litters = 9-i
+     #    bottles[i].empty(litters)
+     #    bottles[i+1].fill(litters)
+     #    bottles[i].print_details()
 
 
+main()
+"""
+
+class SuperDict:
+    def __init__(self, x, y, z):
+        self._x = x
+        self._y = y
+        self._z = z
+    def print_value(self):
+        print(f"x:{self._x}, y:{self._y}, z:{self._z}")
+    def max_value(self):
+        print(max(self._x, self._y, self._z))
+    def max_difference(self):
+        max(self._x-self._y, self._x-self._z,
+            self._y-self._x, self._y-self._z,
+            self._z-self._y, self._z-self._x)
+
+ob = SuperDict(0, 0, 0)
+ob._x = 10
+ob._y = 3
+ob.print_value()
+ob.max_value()
+ob.max_difference()

@@ -142,7 +142,10 @@ class Animal:
         self._hunger = hunger
     def get_name(self):
         return self._mame
-    def 
+    def is_hungr(self):
+        if self._hunger > 0:
+            return True
+
 
 
 class Dog(Animal):

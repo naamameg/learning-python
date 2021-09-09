@@ -259,3 +259,55 @@ print(numbers)
 """print([i*100 if i%2 == 0 else i for i in range(1,10)])"""
 
 """print(["boom" if i % 7 == 0 else i for i in range(1,51)])"""
+
+
+"""even = list(map(lambda x: x * 100, filter(lambda y: (y%2 == 0), [1,2,3,4,5,6,7,8])))
+print(even)
+
+even_and_odd = list(map(lambda x: x*100 if x%2 == 0 else x, [1,2,3,4,5,6,7,8,9]))
+print(even_and_odd)"""
+
+
+"""seven_boom = list(map(lambda x: "boom!" if x%7 == 0 else x, range(1,51)))
+print(seven_boom)
+"""
+
+
+"""from functools import reduce
+
+sum = lambda x,y: x + y
+print(sum(1,2))
+"""
+
+"""tuples = [(i,s) for i in range(1,7) for s in range(1,7)]
+print(tuples)"""
+
+"""joules = [1000,2000,3000,4000]
+joule_to_kilo = list(map(lambda x: (x, x/4184), joules))
+print(joule_to_kilo)
+
+
+languages = ['a', 'b', 'c', 'Python']
+find_python = [name for name in languages if name == "Python"]
+print(find_python)"""
+
+
+def anagram(word_1, word_2):
+    k = word_1.split()
+    v = word_2.split()
+    d = zip(k,v)
+    return d
+
+print(anagram("hello", "olleh"))
+
+
+
+
+
+
+
+
+
+
+
+
