@@ -88,8 +88,8 @@ def main():
     print(sparrow_2.get_name())
     print(Sparrow.count_animals)
     print(dir(Sparrow))
-main()
-"""
+main()"""
+
 
 
 
@@ -137,41 +137,112 @@ main()"""
 #2.5
 
 class Animal:
+    zoo_name = "Hayaton"
     def __init__(self, name, hunger=0):
-        self._mame = name
+        self._name = name
         self._hunger = hunger
+
     def get_name(self):
-        return self._mame
-    def is_hungr(self):
+        return self._name
+    def __str__(self):
+        return str(self._name) + str(self.__init_subclass__())
+    def is_hungry(self):
         if self._hunger > 0:
             return True
-
+    def feed(self):
+        self._hunger -= 1
+    def talk(self):
+        pass
 
 
 class Dog(Animal):
-    pass
+    def talk(self):
+        print("woof woof")
+    def fetch_stick(self):
+        print("There you go, sir!")
 
 class Cat(Animal):
-    pass
+    def talk(self):
+        print("meow")
+    def chase_laser(self):
+        print("Meeeeow")
 
 class Skunk(Animal):
-    pass
+    def __init__(self, name, hunger=0, stink_count=6):
+        self._stink_count = stink_count
+        Animal.__init__(self, name, hunger=hunger)
+
+    def talk(self):
+        print("tssss")
+    def stink(self):
+        print("Dear lord!")
 
 class Unicorn(Animal):
-    pass
+    def talk(self):
+        print("Good day, darling")
+    def sing(self):
+        print("So call me, maybe")
 
 class Dragon(Animal):
-    pass
+    def __init__(self, name, hunger=0, color="Green"):
+        self._color = color
+        Animal.__init__(self, name, hunger=hunger)
+
+    def talk(self):
+        print("Raaawr")
+    def breath_fire(self):
+        print("$@#$#@$")
+
+
+def main():
+    dog = Dog("Brownie", 10)
+    dog1 = Dog("Doggo", 80)
+    cat = Cat("Zelda", 3)
+    cat1 = Cat("Kitty", 80)
+    skunk = Skunk("Stinky", 0)
+    skunk1 = Skunk("stinky jr", 80)
+    unicorn = Unicorn("Keith", 7)
+    unicorn1 = Unicorn("Clair", 80)
+    dragon = Dragon("Lizzy", 1450)
+    dargon1 = Dragon("McFly", 80)
+    my_zoo = [dog, cat, skunk, unicorn, dragon]
+    for animal in my_zoo:
+        print(f"{type(animal).__name__} {animal._name}")
+        animal.talk()
+        if type(animal).__name__ == Dog:
+            animal.fetch_stick()
+        elif type(animal).__name__ == Cat:
+            animal.chase_laser()
+        elif type(animal).__name__ == Skunk:
+            animal.stink()
+        elif type(animal).__name__ == Unicorn:
+            animal.sing()
+        elif type(animal).__name__ == Dragon:
+            animal.breath_fire()
+    for animal in my_zoo:
+        while animal.is_hungry():
+            animal.feed()
+    print(Dog.zoo_name)
+
+main()
 
 
 
+"""def main():
+    dog = Dog("Brownie", 10)
+    cat = Cat("Zelda", 3)
+    skunk = Skunk("Stinky", 0)
+    unicorn = Unicorn("Keith", 7)
+    dragon = Dragon("Lizzy", 1450)
+    my_zoo = [dog, cat, skunk, unicorn, dragon]
+    class_list = ["Dog", "Cat", "Skunk", "Unicorn", "Dragon"]
+    zoo_list = ["Brownie", "Zelda", "Stinky", "Keith", "Lizzy"]
+    zoo_dict = dict(zip(class_list, zoo_list))
+    for class_list,zoo_list in zoo_dict.items():
+        print(class_list, zoo_list)
+    for animal in my_zoo:
+        while animal.is_hungry():
+            animal.feed()
 
 
-
-
-
-
-
-
-
-
+main()"""
