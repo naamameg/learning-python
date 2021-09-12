@@ -292,16 +292,32 @@ find_python = [name for name in languages if name == "Python"]
 print(find_python)"""
 
 
-def anagram(word_1, word_2):
-    k = word_1.split()
-    v = word_2.split()
-    d = zip(k,v)
-    return d
+"""def anagram(word_1, word_2):
+    x = -1
+    for i in range(len(word_1)):
+        if word_1[i] == word_2[x]:
+            x -= 1
+        else:
+            return False
+        return True
 
-print(anagram("hello", "olleh"))
+print(anagram("naama", "amaan"))"""
 
 
 
+
+def roman_number(roman_digit):
+    roman_dict = {"I": 1, "V": 5, "X": 10, "L": 50}
+    x = 0
+    for i in range(len(roman_digit)-1):
+        if roman_digit[i] in roman_dict:
+            if roman_digit[i] == "I" and roman_digit[i+1] != "I":
+                x = x + (roman_dict[roman_digit[i]])
+            else:
+                x = x + roman_dict[roman_digit[i]]
+
+    return x
+print(roman_number("LX"))
 
 
 

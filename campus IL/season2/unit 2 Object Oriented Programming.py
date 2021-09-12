@@ -204,8 +204,8 @@ def main():
     unicorn = Unicorn("Keith", 7)
     unicorn1 = Unicorn("Clair", 80)
     dragon = Dragon("Lizzy", 1450)
-    dargon1 = Dragon("McFly", 80)
-    my_zoo = [dog, cat, skunk, unicorn, dragon]
+    dragon1 = Dragon("McFly", 80)
+    my_zoo = [dog, dog1, cat, cat1, skunk, skunk1, unicorn, unicorn1, dragon, dragon1]
     for animal in my_zoo:
         print(f"{type(animal).__name__} {animal._name}")
         animal.talk()

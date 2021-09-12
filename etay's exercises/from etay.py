@@ -12,6 +12,7 @@ print(create_snake(3))"""
 
 
 #2
+import math
 
 """def count_snake(snake):
     counter = 0
@@ -301,7 +302,7 @@ def main():
 main()
 """
 
-class SuperDict:
+"""class SuperDict:
     def __init__(self, x, y, z):
         self._x = x
         self._y = y
@@ -321,3 +322,109 @@ ob._y = 3
 ob.print_value()
 ob.max_value()
 ob.max_difference()
+"""
+
+"""#1
+from math import pi
+
+class Shape:
+    def __init__(self):
+        pass
+    def get_area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, height, width):
+        Shape.__init__(self)
+        self._height = height
+        self._width = width
+    def get_area(self):
+        return self._height * self._height
+
+class Circle(Shape):
+    def __init__(self, radius):
+        Shape.__init__(self)
+        self._radius = radius
+    def get_area(self):
+        return pi * self._radius ** 2
+
+class Square(Rectangle):
+    def __init__(self, edje_length):
+        Rectangle.__init__(self, edje_length, edje_length)
+         """
+
+
+"""#2
+class Date:
+    def __init__(self, year, month, day):
+        self._year = year
+        self._month = month
+        self._day = day
+        if 1 > self._day or self._day > 31:
+            raise ValueError("day must be between 1 and 31!")
+        if self._month < 1 or self._month > 12:
+            raise ValueError(" month must be between 1 and 12!")
+    def print_date(self):
+        print(f"The date is {self._day} of {self._month} in the year {self._year}.")
+    def change_year(self, new_year):
+        self._year = new_year
+
+
+class Datetime(Date):
+    def __init__(self, year, month, day, second, minute, hour):
+        Date.__init__(self, year, month, day)
+        self._second = second
+        self._minute = minute
+        self._hour = hour
+        if self._second < 0 or self._second > 60:
+            raise ValueError("second must be between 0 and 60!")
+        if self._minute < 0 or self._minute > 60:
+            raise ValueError("minute must be between 0 and 60!")
+        if self._hour < 0 or self._hour > 24:
+            raise ValueError("hour must be between 0 and 24!")
+    def change_second(self, new_scond):
+        self._second = new_scond
+    def print_date(self):
+        print(f"The date is {self._day} of {self._month} in the year {self._year}. "
+              f"The time is {self._minute} and {self._second} past the hour {self._hour}.")
+
+class DateTime_and_mood(Datetime):
+    def __init__(self, mood):
+        self._mood = mood
+        if self._mood == "sad":
+            Datetime.__init__(self, 2022, 12, 31, 10, 10, 10)
+        elif self._mood == "happy":
+            Datetime.__init__(self, 2021, 1, 1, 0, 0, 0)
+
+    def change_mood(self):
+        if self._mood == "sad":
+            self._mood = "happy"
+        elif self._mood == "happy":
+            self._mood = "sad"
+    def print_date(self):
+        print(f"The date is {self._day} of {self._month} in the year {self._year}. "
+              f"The time is {self._minute} and {self._second} past the hour {self._hour}. "
+              f"The mood is {self._mood}")
+
+def main():
+    date = Date(2021, 9, 9)
+    datetime = Datetime(4, 2, 6, 1, 2, 3)
+    date.print_date()
+    datetime.print_date()
+    date_and_mood = DateTime_and_mood("happy")
+    date_and_mood.print_date()
+main()"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
